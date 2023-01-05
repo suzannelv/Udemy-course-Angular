@@ -1,6 +1,17 @@
+<label>Server name</label>
+<!-- event对象获取事件数据 -->
+<input type="text" 
+       class="form-control"
+       (input)="onUpdateServerName($event)">
+  <p>{{serverName}}</p>
+
 <!-- 用方括号可以动态绑定属性， -->
-<button class="btn btn-primary" [disabled]="!alowNewServer">Add server</button>
-<p [innerText]="alowNewServer"></p>
+<!-- 使用括号的事件绑定 -->
+<button class="btn btn-primary" 
+        [disabled]="!alowNewServer"
+        (click)="onCreateServer()">Add server</button>
+<!-- <p [innerText]="alowNewServer"></p> -->
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
 

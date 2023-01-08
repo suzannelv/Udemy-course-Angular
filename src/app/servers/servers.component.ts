@@ -13,7 +13,8 @@ userName = "";
 serverCreated = false;
 servers = ['Testserver', 'Testserver 2']
 // exercice 2 : ngfor
-showSecret = false
+showSecret = false;
+
 
 constructor(){
   setTimeout(() => {
@@ -37,6 +38,11 @@ ngOnInit(): void {
     this.userName=""
   }
   // exercice2: ngfor
-  onToggleDetails(){}
+  // log= [];
+  onToggleDetails(){
+    this.showSecret = !this.showSecret;
+    // this.log.push(this.log.length+1);
+ 
+  }
 
 }
